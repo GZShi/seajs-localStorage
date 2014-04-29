@@ -6,7 +6,7 @@
 
 	function save(uri, dataUri) {
 		dataUri = dataUri.toString();
-		localStorage.setItem('seajscache<' + uri + '>', 'data:text/javascript,define(' + dataUri + ');');
+		localStorage.setItem('seajscache<' + uri + '>', encodeURI('data:text/javascript,define(' + dataUri + ');'));
 	}
 
 	function load(uri) {
